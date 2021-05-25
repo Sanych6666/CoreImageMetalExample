@@ -10,9 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var metalView: MetalView!
-    @IBOutlet private weak var scrollView: UIScrollView!
-    @IBOutlet private weak var metalViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var metalViewHeightConstraint: NSLayoutConstraint!
     
     private var imagePickerController: UIImagePickerController?
     
@@ -39,18 +36,7 @@ class ViewController: UIViewController {
         }
         let ciImage = CIImage(cgImage: cgImage).oriented(CGImagePropertyOrientation(image.imageOrientation))
         metalView.image = ciImage
-        setupScrollViewContent(size: ciImage.extent.size)
         metalView.drawableSize = ciImage.extent.size
-    }
-    
-    private func setupScrollViewContent(size: CGSize) {
-        let minScale = min(scrollView.frame.height / size.height, scrollView.frame.width / size.width)
-        let maxScale: CGFloat = 10
-        scrollView.minimumZoomScale = minScale
-        scrollView.maximumZoomScale = minScale < 1.0 ? maxScale : minScale * maxScale
-        scrollView.zoomScale = minScale
-        metalViewWidthConstraint.constant = size.width
-        metalViewHeightConstraint.constant = size.height
     }
 
 }

@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mtkView contentMode="scaleToFill" clearDepth="0.0" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Invalid" sampleCount="0" paused="YES" enableSetNeedsDisplay="YES" autoResizeDrawable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-PD-RKN" customClass="MetalView" customModule="CoreImageMetalExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                            </mtkView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaI-Yo-svk">
                                 <rect key="frame" x="151.5" y="812" width="111" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -25,44 +28,20 @@
                                     <action selector="choosePhotoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gp-LX-H5H"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQS-X2-wi1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
-                                <subviews>
-                                    <mtkView contentMode="scaleToFill" clearDepth="0.0" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Invalid" sampleCount="0" paused="YES" enableSetNeedsDisplay="YES" autoResizeDrawable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-PD-RKN" customClass="MetalView" customModule="CoreImageMetalExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="Fsz-Hi-6AL"/>
-                                            <constraint firstAttribute="height" constant="100" id="I5i-7K-vJd"/>
-                                        </constraints>
-                                    </mtkView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="FjL-PD-RKN" firstAttribute="leading" secondItem="iQS-X2-wi1" secondAttribute="leading" id="CxY-Xc-poy"/>
-                                    <constraint firstItem="FjL-PD-RKN" firstAttribute="top" secondItem="iQS-X2-wi1" secondAttribute="top" id="Z54-4u-62B"/>
-                                    <constraint firstAttribute="trailing" secondItem="FjL-PD-RKN" secondAttribute="trailing" id="lZJ-Rc-FHC"/>
-                                    <constraint firstAttribute="bottom" secondItem="FjL-PD-RKN" secondAttribute="bottom" id="sxu-57-rVh"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="T0b-YQ-eq0"/>
-                                </connections>
-                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaI-Yo-svk" secondAttribute="bottom" constant="20" id="8pe-Ge-JUw"/>
-                            <constraint firstItem="iQS-X2-wi1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ERY-a1-PAi"/>
-                            <constraint firstItem="iQS-X2-wi1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sdc-9z-Il9"/>
+                            <constraint firstItem="FjL-PD-RKN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SJM-td-iOg"/>
+                            <constraint firstItem="FjL-PD-RKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Seh-x1-wNI"/>
                             <constraint firstItem="KaI-Yo-svk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ybw-Ht-Z3a"/>
-                            <constraint firstItem="iQS-X2-wi1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bEa-vc-BfZ"/>
-                            <constraint firstItem="KaI-Yo-svk" firstAttribute="top" secondItem="iQS-X2-wi1" secondAttribute="bottom" constant="20" id="zNC-um-z8m"/>
+                            <constraint firstItem="FjL-PD-RKN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="blj-Ic-out"/>
+                            <constraint firstItem="KaI-Yo-svk" firstAttribute="top" secondItem="FjL-PD-RKN" secondAttribute="bottom" id="czr-mG-EMO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="metalView" destination="FjL-PD-RKN" id="zsj-sm-Ztw"/>
-                        <outlet property="metalViewHeightConstraint" destination="I5i-7K-vJd" id="hAz-oQ-V8s"/>
-                        <outlet property="metalViewWidthConstraint" destination="Fsz-Hi-6AL" id="lzG-c5-dd8"/>
-                        <outlet property="scrollView" destination="iQS-X2-wi1" id="OkH-th-Kkq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
