@@ -13,6 +13,7 @@
 		798280D5265CE96A002F5816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798280D3265CE96A002F5816 /* Main.storyboard */; };
 		798280D7265CE96C002F5816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798280D6265CE96C002F5816 /* Assets.xcassets */; };
 		798280DA265CE96C002F5816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798280D8265CE96C002F5816 /* LaunchScreen.storyboard */; };
+		798280E3265CEC67002F5816 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798280E2265CEC67002F5816 /* MetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		798280D6265CE96C002F5816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		798280D9265CE96C002F5816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		798280DB265CE96C002F5816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		798280E2265CEC67002F5816 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				798280CD265CE96A002F5816 /* AppDelegate.swift */,
 				798280CF265CE96A002F5816 /* SceneDelegate.swift */,
 				798280D1265CE96A002F5816 /* ViewController.swift */,
+				798280E2265CEC67002F5816 /* MetalView.swift */,
 				798280D3265CE96A002F5816 /* Main.storyboard */,
 				798280D6265CE96C002F5816 /* Assets.xcassets */,
 				798280D8265CE96C002F5816 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798280E3265CEC67002F5816 /* MetalView.swift in Sources */,
 				798280D2265CE96A002F5816 /* ViewController.swift in Sources */,
 				798280CE265CE96A002F5816 /* AppDelegate.swift in Sources */,
 				798280D0265CE96A002F5816 /* SceneDelegate.swift in Sources */,
