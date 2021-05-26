@@ -18,26 +18,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mtkView contentMode="scaleToFill" clearDepth="0.0" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Invalid" sampleCount="0" paused="YES" enableSetNeedsDisplay="YES" autoResizeDrawable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-PD-RKN" customClass="MetalView" customModule="CoreImageMetalExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
                             </mtkView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaI-Yo-svk">
-                                <rect key="frame" x="151.5" y="812" width="111" height="30"/>
+                                <rect key="frame" x="16" y="812" width="179.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Choose a photo"/>
                                 <connections>
                                     <action selector="choosePhotoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3gp-LX-H5H"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lre-UW-Cea">
+                                <rect key="frame" x="207" y="812" width="191" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Use exmaple image"/>
+                                <connections>
+                                    <action selector="useExampleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZP-fY-Iek"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaI-Yo-svk" secondAttribute="bottom" constant="20" id="8pe-Ge-JUw"/>
-                            <constraint firstItem="FjL-PD-RKN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SJM-td-iOg"/>
-                            <constraint firstItem="FjL-PD-RKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Seh-x1-wNI"/>
-                            <constraint firstItem="KaI-Yo-svk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ybw-Ht-Z3a"/>
-                            <constraint firstItem="FjL-PD-RKN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="blj-Ic-out"/>
-                            <constraint firstItem="KaI-Yo-svk" firstAttribute="top" secondItem="FjL-PD-RKN" secondAttribute="bottom" id="czr-mG-EMO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lre-UW-Cea" secondAttribute="bottom" constant="20" id="0kU-e3-tJ1"/>
+                            <constraint firstItem="Lre-UW-Cea" firstAttribute="leading" secondItem="FjL-PD-RKN" secondAttribute="centerX" id="1TE-yl-Lyv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lre-UW-Cea" secondAttribute="trailing" constant="16" id="7AO-7u-oWj"/>
+                            <constraint firstItem="KaI-Yo-svk" firstAttribute="trailing" secondItem="FjL-PD-RKN" secondAttribute="centerX" constant="-11.5" id="9Gy-p0-rKs"/>
+                            <constraint firstItem="FjL-PD-RKN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CcZ-QC-fQL"/>
+                            <constraint firstItem="KaI-Yo-svk" firstAttribute="top" secondItem="FjL-PD-RKN" secondAttribute="bottom" constant="20" id="TAH-4E-vyo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaI-Yo-svk" secondAttribute="bottom" constant="20" id="XWC-qL-082"/>
+                            <constraint firstItem="KaI-Yo-svk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jp3-N2-82b"/>
+                            <constraint firstItem="Lre-UW-Cea" firstAttribute="top" secondItem="FjL-PD-RKN" secondAttribute="bottom" constant="20" id="k61-iO-CDN"/>
+                            <constraint firstItem="FjL-PD-RKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pob-LV-Aue"/>
+                            <constraint firstItem="FjL-PD-RKN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="u4y-h9-jz2"/>
                         </constraints>
                     </view>
                     <connections>

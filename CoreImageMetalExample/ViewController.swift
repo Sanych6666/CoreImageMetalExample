@@ -29,6 +29,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction private func useExampleButtonAction(_ sender: Any) {
+        if let image = UIImage(named: "exampleImage.png") {
+            setMetalView(image: image)
+        }
+    }
+    
     private func setMetalView(image: UIImage) {
         guard let cgImage = image.cgImage else {
             print("Can't get cgImage")
