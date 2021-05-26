@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaI-Yo-svk">
-                                <rect key="frame" x="151.5" y="812" width="111" height="30"/>
+                                <rect key="frame" x="16" y="812" width="111" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Choose a photo"/>
                                 <connections>
@@ -46,15 +46,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="T0b-YQ-eq0"/>
                                 </connections>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lre-UW-Cea">
+                                <rect key="frame" x="261" y="812" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Use exmaple image"/>
+                                <connections>
+                                    <action selector="useExampleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZP-fY-Iek"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lre-UW-Cea" secondAttribute="bottom" constant="20" id="0kU-e3-tJ1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lre-UW-Cea" secondAttribute="trailing" constant="16" id="7AO-7u-oWj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KaI-Yo-svk" secondAttribute="bottom" constant="20" id="8pe-Ge-JUw"/>
                             <constraint firstItem="iQS-X2-wi1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ERY-a1-PAi"/>
                             <constraint firstItem="iQS-X2-wi1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sdc-9z-Il9"/>
-                            <constraint firstItem="KaI-Yo-svk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ybw-Ht-Z3a"/>
                             <constraint firstItem="iQS-X2-wi1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bEa-vc-BfZ"/>
+                            <constraint firstItem="KaI-Yo-svk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rv3-2N-X6I"/>
+                            <constraint firstItem="Lre-UW-Cea" firstAttribute="top" secondItem="iQS-X2-wi1" secondAttribute="bottom" constant="20" id="xWA-LV-nQ2"/>
                             <constraint firstItem="KaI-Yo-svk" firstAttribute="top" secondItem="iQS-X2-wi1" secondAttribute="bottom" constant="20" id="zNC-um-z8m"/>
                         </constraints>
                     </view>

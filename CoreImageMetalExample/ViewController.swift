@@ -32,6 +32,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction private func useExampleButtonAction(_ sender: Any) {
+        if let image = UIImage(named: "exampleImage.png") {
+            setMetalView(image: image)
+        }
+    }
+    
     private func setMetalView(image: UIImage) {
         guard let cgImage = image.cgImage else {
             print("Can't get cgImage")
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
     }
     
     private func setupScrollViewContent(size: CGSize) {
+        print("image size: \(size)")
         let minScale = min(scrollView.frame.height / size.height, scrollView.frame.width / size.width)
         let maxScale: CGFloat = 10
         scrollView.minimumZoomScale = minScale
